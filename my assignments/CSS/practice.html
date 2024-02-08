@@ -1,0 +1,364 @@
+Previous DemoBest jQueryCodelab 
+Product Grid Style : Demo 8
+
+New
+Men's Blazer
+    
+$15.00 $20.00
+
+Women's White Shirt
+    
+$15.00
+
+Women's Top
+    
+$10.00 $13.00
+
+Women's Black Top
+    
+$13.00
+HTML (Icon Fonts Used : Fontawesome & CSS Framwork: Bootstrap)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="images/img-1.jpg">
+                        <img class="pic-2" src="images/img-2.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                    </ul>
+                    <span class="product-new-label">New</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                    <ul class="rating">
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                    </ul>
+                    <div class="price">$15.00
+                        <span>$20.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="images/img-3.jpg">
+                        <img class="pic-2" src="images/img-4.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" class="fa fa-search"></a></li>
+                        <li><a href="" class="fa fa-shopping-bag"></a></li>
+                        <li><a href="" class="fa fa-shopping-cart"></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's White Shirt</a></h3>
+                    <ul class="rating">
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                        <li class="far fa-star"></li>
+                        <li class="far fa-star"></li>
+                    </ul>
+                    <div class="price">$15.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+CSS (Fonts required : Roboto Slab & Lora)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+.product-grid{
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+    z-index: 1;
+}
+.product-grid .product-image{
+    border: 1px solid rgba(0,0,0,0.1);
+    overflow: hidden;
+    perspective: 1500px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.product-grid .product-image a{ display: block; }
+.product-grid .product-image img{
+    width: 100%;
+    height: auto;
+}
+.product-grid .pic-1{
+    opacity: 1;
+    transition: all 0.5s ease-out 0s;
+}
+.product-grid .pic-2{
+    opacity: 0;
+    transform: rotateY(-90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-out 0s;
+}
+.product-grid:hover .pic-2{
+    opacity: 1;
+    transform: rotateY(0);
+}
+.product-grid .social{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 3px;
+    left: -20%;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.product-grid:hover .social{ left: 17px; }
+.product-grid .social li a{
+    color: #fff;
+    background-color: #333333;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    margin: 15px 0;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+.product-grid .social li a:hover {
+    color: #fff;
+    background-color: #78e08f;
+}
+.product-grid .product-new-label{
+    color: #fff;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.product-grid .product-content{
+    text-align: center;
+    padding: 20px 0 0;
+}
+.product-grid .title{
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    transition: all 0.3s ease 0s;
+}
+.product-grid .title a{ color: #333; }
+.product-grid .title a:hover{ color: #78e08f; }
+.product-grid .rating{
+    color: #78e08f;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 0 10px;
+    list-style: none;
+}
+.product-grid .price {
+    color:#333;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    margin-bottom:8px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.product-grid .price span {
+    color: #999;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: line-through;
+    margin-left: 7px;
+    display: inline-block;
+}
+@media only screen and (max-width:990px){
+    .product-grid{ margin-bottom: 30px; }
+}
+License Terms

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Leap Years in Wahaj Life</title>
+</head>
+<body>
+    <script>
+    var wahaj=0;
+
+    for (var i = 1990; i <= 2024; i++) {
+        if (i % 4 == 0) {
+            wahaj++;
+            document.write("Leap year" + i + "<br>")
+        }
+
+        // <!-- else { document.write("Not a Leap year " + i + "<br>")} -->
+    }
+    document.write("total count of leap years" +wahaj)
+</script>
+</body>
+</html>

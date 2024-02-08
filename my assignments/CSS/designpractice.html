@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design practice</title>
+    <!-- ye google fonts apply karnay ki technique hai. is main fonts.google.com se link outha k paste kardaitay hain ms
+    visual studio code main and phir head k tag main neechay style k tag main css style sheet ki details provide kardetay hain jesa k fonts
+    style, size etc. ham heading par bhe font apply karsaktay hain. yaad rahay saray links header main aayengay. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <style>
+        /* Ye website main header laganay ki practice hai. */
+        @font-face {
+            font-family: "englishfont";
+            src: url(fonts/medio.otf);
+        }
+
+        .english {
+
+            font-family: "englishfont";
+        }
+
+        p {
+            color: brown background-color: azure;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        /* ye ab website k banner par flex (yani partition create kar k jesa k boxes main koi special writing karni ho exactly same as grid.) */
+        /* flex */
+
+        .container {
+
+            width: 100%;
+            height: 300%;
+            background-color: blue;
+            background-image: url(https://www.hdcarwallpapers.com/walls/6th_gear_racing_cars-wide.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            display: flex;
+
+            /* row row-reverse    coloumn column-reverse */
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .items {
+            margin: 50 px;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        #uni {
+            align-self: center;
+        }
+
+        /* ye inline, inline-block, block ka style hai  */
+        @font-face {
+            font-family: "english font";
+            src: url(fonts/medio);
+        }
+
+        .header,
+        .footer {
+            color: navy;
+            background-color: silver;
+            height: 30px;
+            font-family: "english font";
+            padding-top: 30px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        img {
+            display: block;
+            height: 200px;
+            width: 70%;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+            background-color: beige;
+            color: brown;
+        }
+
+        .rows {
+            background-color: aquamarine;
+            margin: 30px 10px;
+            padding: 20px 20px;
+        }
+
+        .box {
+            display: inline-block;
+            width: 350px;
+            height: 150px;
+            background-color: blanchedalmond;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        a {
+            text-decoration: double;
+            font-family: "english font";
+        }
+
+        /* ab yahan ham apni heading ka font ka style dainge jisey ham ne google font se download kiya hai. jis k links opaer paste kardiye gaye hain. */
+        @font-face {
+            font-family: 'Roboto', sans-serif;
+            src: url(https://fonts.google.com/share?selection.family=Roboto:wght@100);
+        }
+
+        h1 {
+            color: blue;
+            background-color: brown;
+            font-size: 50px;
+            text-align: center;
+            text-decoration: dashed;
+            text-transform: capitalize;
+            font-style: italic;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- jo font hamnay opar google fonts se outhaya hai aur headngs main apply kiya hai url k saath woh yahan par heading main reflect hogaya hai -->
+    <h1> Design practice</h1>
+    <!-- Ye website main header laganay ki coding hai.  -->
+    <p class="english"> I am doing Coding. FOLKS!!</p>
+    <!-- ye ab website k banner par flex (yani partition create kar k jesa k boxes main koi special writing karni ho exactly same as grid.) ki coding hai -->
+    <!-- ye flex ki coding hai.. -->
+    <div class="container">
+        <div class="item"> </div>
+        <div class="item"> </div>
+        <div class="item"> </div>
+        <div class="item" id="uni"> <b> 1991 </b> </div>
+    </div>
+    <!-- ye inline, inline-block, block ki coding hai -->
+    <div class="header"> My Practice </div>
+    <img src="https://unsplash.com/photos/a-person-standing-on-a-beach-at-sunset-JcVmixOBaW4" alt="image here">
+    <h1> Our library </h1>
+    <!-- Step 1: First step: div class ko hamesha container main lainge. -->
+    <div class="container">
+        <!-- Step 2: Second step: div class ki rows start karainge -->
+        <div class="rows">
+            <!-- step 3: Third step: Now, div class main jo kuch bhe box k andar aana hai woh boxes ka material aayega. -->
+            <div class="box">
+                <a href="https://trans4mind.com/download-pdfs/Richard_Templar-The_Rules_of_Work-EN.pdf">
+                    Richard_Templar-The_Rules_of_Work-EN </a>
+            </div>
+            <div class="box">
+                <a href="https://readastory.org.in/1st.pdf"> readastory </a>
+            </div>
+            <div class="box">
+                <a href="https://kims.net.pk/LM%20ShortCours/English/BookGuffey.pdf"> BookGuffey </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> copyright & copy; All Right reserved by WAHAJ PROJECT.</div>
+
+</body>
+
+</html>
